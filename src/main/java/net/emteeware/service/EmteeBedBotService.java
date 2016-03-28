@@ -19,16 +19,21 @@ public class EmteeBedBotService {
     private MonitoredUsers monitoredUsers;
     private DueUsers dueUsers;
 
+
+    private boolean shutdownRequested = false;
+
     @Autowired
     TwitterService twitterService;
 
     @Autowired
     UserService userService;
 
-
+    public void requestShutdown() {
+        shutdownRequested = true;
+    }
 
     public void runMainLoop() {
-        while(true) {
+        while(!shutdownRequested) {
             log.info("running main loop");
             userUpdates = twitterService.getUserUpdates();
             userService.updateUsers(userUpdates);
