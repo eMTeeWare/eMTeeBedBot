@@ -35,12 +35,16 @@ public class EmteeBedBotService {
             monitoredUsers = userService.getUsersToMonitor();
             dueUsers = twitterService.checkMonitoredUsers(monitoredUsers);
             twitterService.sendDueUsersToBed(dueUsers);
-            try {
-                Thread.sleep(1000 * 60 * 5L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            delayMainLoop();
         }
 
+    }
+
+    private void delayMainLoop() {
+        try {
+            Thread.sleep(1000 * 60 * 5L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
