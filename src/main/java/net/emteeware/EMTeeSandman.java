@@ -9,14 +9,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
 @SpringBootApplication
-public class EMTeeBedBotApplication implements CommandLineRunner {
+public class EMTeeSandman implements CommandLineRunner {
 
     @Autowired
     EmteeBedBotService emteeBedBotService;
 
 	public static void main(String[] args) {
         log.info("main method");
-        SpringApplication.run(EMTeeBedBotApplication.class, args);
+        SpringApplication.run(EMTeeSandman.class, args);
 	}
 
     @Override

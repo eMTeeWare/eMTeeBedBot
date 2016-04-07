@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.emteeware</groupId>
-	<artifactId>emteebedbot</artifactId>
+	<artifactId>emteesandman</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>eMTee Bed Bot</name>
+	<name>eMTee Sandman</name>
 	<description>A Twitter Bot that sends you to bed in due time.</description>
 
 	<parent>
